@@ -1,0 +1,16 @@
+<section>
+    <div class="todo-list mt-5">
+        @for(todo of visibleTodo; track todo.id) {
+            <div class="todo-item flex aligns-item-center justify-content-between mt-2">
+                <div class="flex align-items-center mr-6 "
+                    [ngClass]="{'line-through' : todo.isCompleted}"
+                >
+                    {{todo.text}}
+                </div>
+                <div>
+                    <p-button label="Complete" severity="danger" (click)="completeTodo(todo.id)"/>
+                </div>
+            </div>
+        }
+    </div>
+</section>

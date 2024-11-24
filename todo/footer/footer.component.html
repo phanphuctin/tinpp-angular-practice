@@ -1,0 +1,8 @@
+<div class="flex justify-content-center w-full mt-3">
+    <p-button label="All" [severity]="chosenFilterSig() === 'all' ? 'success' : 'secondary'"
+        (click)="filterTodo(filterEnum.All)" />
+    <p-button label="Active" [severity]="chosenFilterSig() === 'active' ? 'success' : 'secondary'"
+        (click)="filterTodo(filterEnum.Active)" />
+    <p-button label="Completed" [severity]="chosenFilterSig() === 'completed' ? 'success' : 'secondary'"
+        (click)="filterTodo(filterEnum.Completed)" />
+</div>
